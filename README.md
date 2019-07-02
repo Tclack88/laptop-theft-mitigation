@@ -98,6 +98,9 @@ drwxrwxr-x 2 guest guest    0 Jul  1 16:29 tmp
 ```
 (See optional extra steps below)
 
+Change the email in `mailout.sh` to where you want to receive your future files.<br>
+I'd recommend making this something different from the email from which you're sending these files, because they will get downloaded on here and if the thief ever browses the files on the computer and sees their face, they will become cognizant of this program.
+
 Download the latest chromedriver and put it in the guests ~/bin directory <br>
 (NOT the ~/bin/.bin or the /bin)<br>
 make it executable if not already
