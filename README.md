@@ -141,8 +141,9 @@ MAILTO=""
 
 
 ## Optional extra steps
+
 - Consider changing the names, keylog.py for example may be suspicious for anyone who has heard of a keylogger, etc. Be sure to make the appropriate changes to the master file "norobo.sh"
 
-- You may need to make it obvious to your potential thief that a guest account exists. Ubuntu doesn't display all accounts upon startup.
+- You may need to make it obvious to your potential thief that a guest account exists and that there is no password (I changed the login name to "guest(no password)").
 
 - Technically the `MAILTO=""` line in your cronjob is optional because otherwise you will get notifications every half hour to your gmail account even if you're not signed in as guest. If you want this constant reminder or you just don't care because it's not your home account, you may remove this line.
