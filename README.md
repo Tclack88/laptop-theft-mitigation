@@ -14,12 +14,14 @@ Read more detailed explanation and relevant background information [here][#] (li
 
 Written for and tested in Ubuntu (18.04). Other platforms need to be tested.
 
-non-standard python libraries needed:
+Non-standard python libraries and linux utilities needed:
+
+```bash
 	selenium		-	pip3 install python3-selenium
 	pyxhook			-	pip3 install --user pyxhook
 	xvfb			-	apt-get install xvfb  		# frame buffer
 	pyvirtualdisplay	-	pip3 install pyvirtualdisplay 	# py3 xvfb wrapper
-
+```
 
 ## Step 1: Create a guest account requiring no password and configure
 We want this because we need your thief to be able to log in to computer (triggering the code) and sign into wifi (sending the files)
@@ -88,13 +90,13 @@ And move the python and shell scripts to this .bin directory. If all goes to pla
 
 ```bash 
 ls -l /home/guest/bin/.bin/
--rwxr-xr-x 1 guest guest 1721 Jul  1 12:24 geolocation.py
--rwxr-xr-x 1 guest guest 1403 Jul  1 12:24 keylog.py
--rwxr-xr-x 1 guest guest  127 Jul  1 13:42 mailout.sh
--rwxr-xr-x 1 guest guest  163 Jul  1 12:25 network.sh
--rwxr-xr-x 1 guest guest  157 Jul  1 11:19 norobo.sh
-drwxrwxr-x 2 guest guest    0 Jul  1 16:29 tmp
--rwxr-xr-x 1 guest guest   92 Jul  1 12:25 wc.sh
+-rwxr-xr-x 1 guest guest 1381 Jul  6 11:13 geolocation.py*
+-rwxr-xr-x 1 guest guest 1240 Jul  6 11:14 keylog.py*
+-rwxr-xr-x 1 guest guest  127 Jul  5 11:24 mailout.sh*
+-rwxr-xr-x 1 guest guest  139 Jul  6 11:15 network.sh*
+-rwxr-xr-x 1 guest guest  210 Jul  5 15:49 norobo.sh*
+drwxrwxr-x 2 guest guest 4096 Jul  5 15:49 tmp/
+-rwxr-xr-x 1 guest guest   72 Jul  6 11:14 wc.sh*
 ```
 (See optional extra steps below)
 
@@ -134,7 +136,7 @@ FromLineOverride=YES
 As guest user, run `crontab -e` and add the following to run the script and send out the file in 30 minute intervals"
 ```bash
 MAILTO=""
-*/30 * * * * PATH="$HOME/bin/.bin:$PATH"; export DISPLAY=:0.0; cd ~/bin/.bin ; if [[ $(whoami) == guest ]]; then norobo.sh; fi
+*/30 * * * *  PATH="$HOME/bin/.bin:$PATH"; export DISPLAY=:0.0; cd ~/bin/.bin ; norobo.sh
 ```
 
 
