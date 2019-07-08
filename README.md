@@ -1,5 +1,7 @@
 # Laptop Theft Mitigation
 
+Read a more detailed explanation and relevant background information on my [blog](https://tclack88.github.io/blog/code/2019/07/06/laptop-theft-mitigation.html "Codesplanations")
+
 ## Summary
 
 This is a collection of python and shell scripts which serve as a means to recover a stolen laptop. It has the following features:
@@ -9,8 +11,6 @@ This is a collection of python and shell scripts which serve as a means to recov
 - Geolocator (approximate Based on WPS -- wifi equivalent of GPS)
 
 These four tools used in conjunction help locate your stolen laptop as well as gather evidence for the authorities.
-
-Read more detailed explanation and relevant background information [here][#] (link to be added soon)
 
 Written for and tested in Ubuntu (18.04). Other platforms need to be tested.
 
