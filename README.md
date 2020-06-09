@@ -1,5 +1,7 @@
 # Laptop Theft Mitigation
 
+![Stolen Laptop Image](https://github.com/Tclack88/blog/blob/gh-pages/assets/stolen-laptop/stolen_laptop.png?raw=true)
+
 Read a more detailed explanation and relevant background information on my [blog](https://tclack88.github.io/blog/code/2019/07/06/laptop-theft-mitigation.html "Codesplanations")
 
 ## Summary
